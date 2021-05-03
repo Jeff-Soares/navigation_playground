@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdActivity"
+    tools:context=".FirstFragment"
     tools:ignore="HardcodedText">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="50dp"
         android:gravity="center"
-        android:text="Activity 3"
+        android:text="First Fragment"
         android:textSize="44sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,20 +26,11 @@
         android:layout_height="50dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/bg_button"
-        android:drawableStart="@drawable/arrow_back"
+        android:drawableEnd="@drawable/arrow_forward"
         android:drawablePadding="8dp"
         android:paddingHorizontal="16dp"
-        android:text="Go back to activity 2"
+        android:text="Go to Second"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@id/nav_bottom_menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <include
-        android:id="@+id/nav_bottom_menu"
-        layout="@layout/item_activity_bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

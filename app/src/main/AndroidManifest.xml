@@ -10,16 +10,12 @@
         android:theme="@style/Theme.NavigationTest"
         android:allowBackup="false">
 
-        <activity android:name=".HomeActivity">
+        <activity android:name=".HomeActivity" android:label="Home Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".SecondActivity" />
-
-        <activity android:name=".ThirdActivity" />
 
     </application>
 
