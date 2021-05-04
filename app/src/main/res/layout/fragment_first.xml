@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ABB6D1"
     tools:context=".FirstFragment"
     tools:ignore="HardcodedText">
 
@@ -21,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/back_activity2"
+        android:id="@+id/go_fragment2"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginBottom="32dp"

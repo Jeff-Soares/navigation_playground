@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
     android:background="?attr/colorPrimary"
+    app:itemHorizontalTranslationEnabled="true"
     app:itemIconTint="@drawable/activity_menu_selector"
     app:itemTextColor="@drawable/activity_menu_selector"
     app:menu="@menu/activity_bottom_menu"

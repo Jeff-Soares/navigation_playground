@@ -4,34 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/first_fragment">
+
+
     <fragment
         android:id="@+id/first_fragment"
         android:name="com.jx.navigationtest.FirstFragment"
         android:label="First Fragment"
-        tools:layout="@layout/fragment_first" >
+        tools:layout="@layout/fragment_first">
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/second_fragment" />
+            app:destination="@id/second_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_pop_in_left"
+            app:popExitAnim="@anim/slide_pop_out_right" />
     </fragment>
+
+
     <fragment
         android:id="@+id/second_fragment"
         android:name="com.jx.navigationtest.SecondFragment"
         android:label="Second Fragment"
-        tools:layout="@layout/fragment_second" >
+        tools:layout="@layout/fragment_second">
         <action
             android:id="@+id/action_secondFragment_to_thirdFragment"
-            app:destination="@id/third_fragment" />
+            app:destination="@id/third_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_pop_in_left"
+            app:popExitAnim="@anim/slide_pop_out_right"/>
         <action
             android:id="@+id/action_secondFragment_to_firstFragment"
-            app:destination="@id/first_fragment" />
+            app:destination="@id/first_fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_pop_in_left"
+            app:popExitAnim="@anim/slide_pop_out_right"
+            app:popUpTo="@id/first_fragment"
+            app:popUpToInclusive="true" />
     </fragment>
+
+
     <fragment
         android:id="@+id/third_fragment"
         android:name="com.jx.navigationtest.ThirdFragment"
         android:label="Third Fragment"
-        tools:layout="@layout/fragment_third" >
+        tools:layout="@layout/fragment_third">
         <action
             android:id="@+id/action_thirdFragment_to_secondFragment"
-            app:destination="@id/second_fragment" />
+            app:destination="@id/second_fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_pop_in_left"
+            app:popExitAnim="@anim/slide_pop_out_right"
+            app:popUpTo="@id/second_fragment"
+            app:popUpToInclusive="true" />
     </fragment>
+
+
 </navigation>

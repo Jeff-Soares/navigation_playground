@@ -8,9 +8,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primaryColor">#546e7a</color>
-    <color name="primaryLightColor">#819ca9</color>
-    <color name="primaryDarkColor">#29434e</color>
-    <color name="primaryTextColor">#ffffff</color>
+    <color name="primaryColor">#5085c2</color>
+    <color name="primaryLightColor">#84b4f5</color>
+    <color name="primaryDarkColor">#0f5991</color>
+
+    <color name="secondaryColor">#549177</color>
+    <color name="secondaryLightColor">#83c2a6</color>
+    <color name="secondaryDarkColor">#26634b</color>
+
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
 
 </resources>
