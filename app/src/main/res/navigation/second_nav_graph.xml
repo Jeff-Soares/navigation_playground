@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_nav_graph"
+    app:startDestination="@id/fourth_fragment">
+
+    <fragment
+        android:id="@+id/fourth_fragment"
+        android:name="com.jx.navigationtest.FourthFragment"
+        android:label="Fourth Fragment"
+        tools:layout="@layout/fragment_fourth">
+        <action
+            android:id="@+id/action_fourthFragment_to_FifthFragment"
+            app:destination="@id/fifth_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_pop_in_left"
+            app:popExitAnim="@anim/slide_pop_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fifth_fragment"
+        android:name="com.jx.navigationtest.FifthFragment"
+        android:label="Fifth Fragment"
+        tools:layout="@layout/fragment_fifth">
+        <action
+            android:id="@+id/action_fifthFragment_to_fourthFragment"
+            app:destination="@id/fourth_fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_pop_in_left"
+            app:popExitAnim="@anim/slide_pop_out_right"
+            app:popUpTo="@id/fourth_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>
