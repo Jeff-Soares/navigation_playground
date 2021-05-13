@@ -9,7 +9,7 @@
     app:itemHorizontalTranslationEnabled="true"
     app:itemIconTint="@drawable/activity_menu_selector"
     app:itemTextColor="@drawable/activity_menu_selector"
-    app:menu="@menu/activity_bottom_menu"
+    app:menu="@menu/activity_bottom_menu_1"
     android:transitionName="nav_menu">
 
 </com.google.android.material.bottomnavigation.BottomNavigationView>

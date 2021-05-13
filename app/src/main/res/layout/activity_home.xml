@@ -12,8 +12,10 @@
         android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="30dp"
         android:background="@android:color/transparent"
         android:elevation="8dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,8 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:src="@drawable/ic_bugdroid"
-                android:contentDescription="App Icon"/>
+                android:contentDescription="App Icon"
+                android:src="@drawable/ic_bugdroid" />
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
@@ -51,24 +53,26 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="8dp"
         android:text="Navigation Component"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/nav_tab_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar" />
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/nav_tab_layout"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@android:color/transparent"
-        app:tabTextColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/fragment_container"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabTextColor="@color/white">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -88,7 +92,7 @@
         android:layout_height="0dp"
         android:elevation="8dp"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_flipper"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.6"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,13 +100,26 @@
         app:layout_constraintVertical_bias="0.9"
         app:navGraph="@navigation/first_nav_graph" />
 
-    <include
-        android:id="@+id/bottom_navigation"
-        layout="@layout/item_bottom_navigation"
+    <ViewFlipper
+        android:id="@+id/bottom_nav_flipper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include
+            android:id="@+id/bottom_navigation1"
+            layout="@layout/item_bottom_navigation_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/bottom_navigation2"
+            layout="@layout/item_bottom_navigation_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ViewFlipper>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
